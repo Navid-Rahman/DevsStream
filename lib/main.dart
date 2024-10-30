@@ -1,5 +1,4 @@
-import 'package:devsstream/presentation/home_screen/home_screen.dart';
-import 'package:devsstream/routes.dart';
+import 'package:devsstream/presentation/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,10 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'DevsStream Task',
-      initialRoute: HomeScreen.routeName,
-      routes: routes,
+      home: MainScreen(),
     );
   }
 }

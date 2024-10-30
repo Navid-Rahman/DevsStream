@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/sample_data.dart';
-import '../bottom_navbar.dart';
 import 'widgets/active_loan_products.dart';
 import 'widgets/utility_card.dart';
 import 'widgets/visa_card.dart';
@@ -188,11 +187,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ],
-            ),
-            floatingActionButtonLocation:
-                FloatingActionButtonLocation.centerDocked,
-            floatingActionButton: BottomNavBar(
-              currentIndexNotifier: _currentIndexNotifier,
             ),
           ),
         ),
