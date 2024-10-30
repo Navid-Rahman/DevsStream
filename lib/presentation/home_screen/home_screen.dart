@@ -1,10 +1,11 @@
-import 'package:devsstream/presentation/home_screen/widgets/utility_card.dart';
-import 'package:devsstream/presentation/home_screen/widgets/visa_card.dart';
-import 'package:devsstream/presentation/home_screen/widgets/visa_card_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../data/sample_data.dart';
 import '../bottom_navbar.dart';
+import 'widgets/active_loan_products.dart';
+import 'widgets/utility_card.dart';
+import 'widgets/visa_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,64 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final ValueNotifier<int> _currentIndexNotifier = ValueNotifier<int>(0);
 
   int _currentPage = 0;
-
-  final List<VisaCardData> cards = [
-    VisaCardData(
-      color: Colors.black,
-      cardNumber: '** **** 1234',
-      dueDate: 'Due Date 10th Oct',
-      amount: '\$ 5,000.89',
-    ),
-    VisaCardData(
-      color: Colors.blue,
-      cardNumber: '** **** 5678',
-      dueDate: 'Due Date 15th Nov',
-      amount: '\$ 3,200.50',
-    ),
-    VisaCardData(
-      color: Colors.red,
-      cardNumber: '** **** 9101',
-      dueDate: 'Due Date 20th Dec',
-      amount: '\$ 1,500.75',
-    ),
-    VisaCardData(
-      color: Colors.green,
-      cardNumber: '** **** 1121',
-      dueDate: 'Due Date 25th Jan',
-      amount: '\$ 2,800.00',
-    ),
-  ];
-
-  final List<Map<String, dynamic>> utilities = [
-    {
-      'icon': Icons.light_mode_outlined,
-      'label': 'Electricity\nBill',
-    },
-    {
-      'icon': Icons.wifi_off_outlined,
-      'label': 'Internet\nRecharge',
-    },
-    {
-      'icon': Icons.connected_tv,
-      'label': 'Cable\nBill',
-    },
-    {
-      'icon': Icons.mobile_screen_share_outlined,
-      'label': 'Mobile\nRecharge',
-    },
-    {
-      'icon': Icons.local_gas_station,
-      'label': 'Gas\nBill',
-    },
-    {
-      'icon': Icons.water_damage,
-      'label': 'Water\nBill',
-    },
-    {
-      'icon': Icons.money,
-      'label': 'Loan\nPayment',
-    }
-  ];
 
   @override
   void initState() {
@@ -202,6 +145,47 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.bold,
                         )),
                   ],
+                ),
+                const SizedBox(height: 12),
+                SizedBox(
+                  height: 100,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: activeLoans.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: const EdgeInsets.only(right: 12),
+                        width: MediaQuery.of(context).size.width / 1.4,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://media.istockphoto.com/id/1150425295/photo/3d-illustration-of-generic-hatchback-car-perspective-view.jpg?s=1024x1024&w=is&k=20&c=bm5iqq6Vq1hYtlety6VLiga7hITUCDpr46qhbfXRs_4=',
+                                  width: 50,
+                                  height: 50,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const SizedBox(width: 24),
+                              ActiveLoansProducts(
+                                amount: activeLoans[index]['amount'],
+                                nextDate: activeLoans[index]['nextDate'],
+                                model: activeLoans[index]['model'],
+                                progress: activeLoans[index]['progress'],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
