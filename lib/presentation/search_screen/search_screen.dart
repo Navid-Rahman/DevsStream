@@ -54,7 +54,11 @@ class _SearchScreenState extends State<SearchScreen> {
 
   Widget _buildProductsList() {
     if (_isLoading) {
-      return const Center(child: CircularProgressIndicator());
+      return const Center(
+        child: CircularProgressIndicator(
+          color: Colors.black,
+        ),
+      );
     }
 
     if (_error != null) {
