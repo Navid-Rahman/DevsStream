@@ -1,8 +1,9 @@
-import 'package:devsstream/presentation/bottom_navbar.dart';
-import 'package:devsstream/presentation/home_screen/home_screen.dart';
-import 'package:devsstream/presentation/search_screen/search_screen.dart';
-import 'package:devsstream/presentation/wallet_screen/wallet_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'bottom_navbar.dart';
+import 'home_screen/home_screen.dart';
+import 'search_screen/search_screen.dart';
+import 'wallet_screen/wallet_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
