@@ -1,7 +1,13 @@
-import 'package:devsstream/presentation/main_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'presentation/main_screen.dart';
+import 'services/hive_service.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await HiveService.init();
+
   runApp(const MyApp());
 }
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '/model/product_model.dart';
+import '/model/product_response.dart';
 
 class ProductCard extends StatelessWidget {
-  final ProductModel product;
+  final ProductResponse product;
 
   const ProductCard({super.key, required this.product});
 

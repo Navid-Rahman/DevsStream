@@ -1,11 +1,11 @@
-import 'package:devsstream/presentation/search_screen/widgets/product_card.dart';
-import 'package:devsstream/presentation/search_screen/widgets/total_spending_card.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-import '/chart_service.dart';
-import '../../model/product_model.dart';
-import '../../repository/product_repository.dart';
+import '/model/product_response.dart';
+import '/repository/product_repository.dart';
+import '/services/chart_service.dart';
+import 'widgets/product_card.dart';
+import 'widgets/total_spending_card.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -20,7 +20,7 @@ class _SearchScreenState extends State<SearchScreen> {
   final ChartService _chartService = ChartService();
   final ProductRepository _productRepository = ProductRepository();
   late String _selectedPeriod;
-  List<ProductModel> _products = [];
+  List<ProductResponse> _products = [];
   bool _isLoading = true;
   String? _error;
 

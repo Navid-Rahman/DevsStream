@@ -1,4 +1,4 @@
-import 'data/chart_data.dart';
+import '../data/chart_data.dart';
 
 class ChartService {
   final Map<String, dynamic> _data = chartData['data'];

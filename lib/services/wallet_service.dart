@@ -1,4 +1,4 @@
-import 'data/wallet_data.dart';
+import '../data/wallet_data.dart';
 
 class WalletService {
   final Map<String, dynamic> _data = spendData;
