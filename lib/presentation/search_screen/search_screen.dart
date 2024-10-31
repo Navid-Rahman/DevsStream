@@ -120,7 +120,7 @@ class _SearchScreenState extends State<SearchScreen> {
         onRefresh: _loadProducts,
         child: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 150),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -132,7 +132,6 @@ class _SearchScreenState extends State<SearchScreen> {
               const TotalSpendingCard(),
               const SizedBox(height: 30),
               _buildProductsList(),
-              const SizedBox(height: 20),
             ],
           ),
         ),

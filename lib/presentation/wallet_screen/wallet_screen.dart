@@ -1,7 +1,8 @@
-import 'package:devsstream/services/wallet_service.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '/services/wallet_service.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({super.key});
@@ -96,7 +97,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 BarChartRodData(
                   toY: spendValues[index],
                   color: Colors.blue,
-                  width: 60,
+                  width: 50,
                   gradient: const LinearGradient(
                     colors: [Colors.purple, Colors.purpleAccent],
                     begin: Alignment.bottomCenter,
@@ -137,7 +138,7 @@ class _WalletScreenState extends State<WalletScreen> {
         child: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 150),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
