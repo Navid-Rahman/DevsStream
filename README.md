@@ -1,16 +1,31 @@
-# devsstream
+# Devsstream Mobile Application Developer Technical Task
 
-A new Flutter project.
+This repository contains my submission for the technical task assigned as part of the Mobile Application Developer position evaluation at Devsstream Limited.
 
-## Getting Started
+## Project Overview
 
-This project is a starting point for a Flutter application.
+The project implements all the core functionalities specified in the task instructions. The user interface was designed based on subjective decisions due to the limited UI resources provided, focusing on usability and clean design.
 
-A few resources to get you started if this is your first Flutter project:
+## Implemented Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- All specified features and functionalities in the task have been successfully implemented, ensuring complete operational flow as required.
+- Design choices were made to create an intuitive and responsive user experience, aligning with the functional needs outlined.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Note
+
+The **Kotlin project** is the only section not completed in this submission.
+
+## How to Run the Project
+
+1. Clone the repository.
+2. Open the project in your preferred IDE.
+3. Install the necessary dependencies.
+4. Run the application on an emulator or a physical device.
+
+## Additional Information
+
+For further information or questions regarding this project, please feel free to reach out.
+
+---
+
+Thank you for reviewing my submission!
